@@ -159,8 +159,7 @@ function shouldShowPreview(p) {
     let show = searchString == "";
     show = show || p.title.includes(searchString);
     show = show || p.artist.includes(searchString);
-    show = show || p.category.includes(searchString);
-    p.tags.forEach(t => show = t.includes(searchString));
+    p.tags.forEach(t => show = show || t.includes(searchString));
     return show;
 }
 
