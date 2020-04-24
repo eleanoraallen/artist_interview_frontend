@@ -4,13 +4,14 @@
 		<meta charset="utf-8">
 		<title>Archive</title>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="../css/webfonts/ingram-mono-regular.css" type="text/css" charset="utf-8" />
 		<link rel="stylesheet" type="text/css" href="../css/style.css" />
 		<link rel="stylesheet" type="text/css" href="../css/archive.css" />
 	</head>
 	<body>
 		<a id='skipLink' href='#contentContainer'>Jump to main</a>
 		<div class="header">
-			<a href="index.html"><div class="logoContainer"> LOGO HERE </div></a>
+			<div class="logoContainer"><a href="index.html" class="logoLink">/ Variables</a></div>
 			<div class="navContainer" role="navigation">
 				<nav>
 					<a class="navLink" href="./about.html">About</a>
@@ -20,12 +21,13 @@
 			</div>
 			<div id="searchContainer">
 				<input id="searchBar" type="search" placeholder="Search interviews">
+				<img class="searchIcon" src="../assets/searchIcon.png">
 			</div>
 		</div>
 		<div class="sortContainer">
-			<button id="titleButton">Title</button>
-			<button id="artistButton">Artist</button>
-			<button id="dateButton">Date</button>
+			<button class="sortButton" id="dateButton">Date ▼</button>
+			<button class="sortButton" id="artistButton">Artist ▼</button>
+			<button class="sortButton" id="interviewerButton">Interviewer ▼</button>
 		</div>
 		<main>
 			<div id="contentContainer" role="main">

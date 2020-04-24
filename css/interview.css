@@ -1,1 +1,62 @@
-/* This file will be used to style individual interview pages */
+#contentContainer {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 100px;
+  }
+  
+  .interviewArtist {
+    padding-top: 100px;
+    font-size: 16pt;
+    text-align: center;
+  }
+  
+  .interviewInterviewer {
+    padding-top: 10px;
+    font-size: 13pt;
+    text-align: center;
+  }
+  
+  .interviewImageContainer {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+  }
+  
+  .interviewImage {
+    padding-top: 20px;
+    width: 70%;
+    max-height: 550px;
+    object-fit: scale-down;
+  }
+  
+  .interviewImageTitle {
+    text-align: center;
+    padding-top: 5px;
+    font-size: 10pt;
+    padding-bottom: 20px;
+  }
+  
+  .interviewDescription {
+    padding-top: 50px;
+    color: rgb(255, 196, 0);
+    padding-right: 20%;
+    padding-left: 20%;
+    padding-bottom: 40px;
+  }
+
+  .interviewQuestion {
+    padding-top: 30px;
+    color: black;
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+    padding-right: 20%;
+    padding-left: 20%;
+  }
+
+  .interviewAnswer {
+    padding-top: 30px;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    padding-right: 20%;
+    padding-left: 20%;
+  }

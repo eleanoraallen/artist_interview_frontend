@@ -2,9 +2,10 @@
 /* General style that will apply to all pages */
 
 body {
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'IngramMono-Regular', Helvetica, Arial, Sans-Serif;
+    color: black;
     margin: 0;
-    background-color: #e6ecf0;
+    background-color: white;
   }
   
   #skipLink {
@@ -22,6 +23,66 @@ body {
     height:auto;
   }
 
-  .currentNavLink {
-      color: pink;
+  .header {
+    background-color: rgb(255, 208, 0);; 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 16pt;
+  }
+
+  .logoLink {
+    color: black;
+    text-decoration: none;
+  }
+
+  .navLink {
+    margin-left: 10px;
+    margin-right: 10px;
+    color: black;
+    text-decoration: none;
+  }
+
+  .navLink:hover {
+    text-decoration: underline;
+  }
+
+  .searchContainer {
+    display: flex;
+    flex-direction: row;
+  }
+
+  #searchBar {
+    background-color: rgb(255, 208, 0);
+    width: 50px;
+    border: hidden;
+    outline: none;
+    text-align: right;
+    font-family: 'IngramMono-Regular', Helvetica, Arial, Sans-Serif;
+  }
+
+  ::-webkit-input-placeholder {
+    color:transparent;
+ }
+ 
+ :-moz-placeholder { /* Firefox 18- */
+    color:transparent; 
+ }
+ 
+ ::-moz-placeholder {  /* Firefox 19+ */
+    color:transparent; 
+ }
+ 
+ :-ms-input-placeholder {  
+    color:transparent;
+ }
+
+  .searchIcon {
+    height: 20px;
+    margin-right: 10px;
+    margin-top: 2px;
   }

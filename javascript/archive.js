@@ -19,8 +19,8 @@ let sortBy = 'date';
 // represents a preview of an interview
 class Preview {
     constructor(data, visible) {
-      this.title = data.title;
       this.artist = data.artist;
+      this.interviewer = data.interviewer;
       this.date = data.date;
       this.imageUrl = data.imageUrl;
       this.description = data.description;
@@ -57,16 +57,16 @@ function sortArtist(event) {
 document.getElementById("artistButton").addEventListener("click", sortArtist);
 
 /**
- * sorts previews according to title and updates the page
+ * sorts previews according to interviewer and updates the page
  * @param event<click> onClick event
  */
-function sortTitle(event) {
-    sortBy = 'title';
+function sortInterviewer(event) {
+    sortBy = 'interviewer';
     previews = sortPreviews(previews);
     writePreviews();
 }
 // add event listener
-document.getElementById("titleButton").addEventListener("click", sortTitle);
+document.getElementById("interviewerButton").addEventListener("click", sortInterviewer);
 
 /**
  * updates previews according to search parameters
@@ -87,40 +87,40 @@ document.getElementById("searchBar").addEventListener("input", handleSearch);
  * ACTUALY DOES: loads fake previews for testing
  */
 function loadPreviews() {
-    const data1 = {
-        title: "Interview 1", 
-        artist: "Artist1", 
-        imageUrl: "https://www.barnesandnoble.com/blog/sci-fi-fantasy/wp-content/uploads/sites/4/2018/01/tazheader.jpg",
+    const data1 = { 
+        artist: "Artist1",
+        interviewer: "Interviewer2", 
+        imageUrl: "https://pbs.twimg.com/profile_images/986909792227618817/FMmbKYXl_400x400.jpg",
         date: "03/15/17776",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
-        url: "https://cs.brown.edu/courses/csci1320/",
+        url: "./sample_interview.html",
         tags: ["xxx", "yyy", "zzz"],
     };
     const data2 = {
-        title: "Interview 2", 
-        artist: "ZArtist2", 
+        artist: "Artist2", 
+        interviewer: "Interviewer4", 
         imageUrl: "https://www.barnesandnoble.com/blog/sci-fi-fantasy/wp-content/uploads/sites/4/2018/01/tazheader.jpg",
         date: "03/15/1776",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
-        url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach",
+        url: "./sample_interview.html",
         tags: ["xxx", "zzz"],
     };
     const data3 = {
-        title: "Interview 3", 
         artist: "Artist3", 
-        imageUrl: "https://www.barnesandnoble.com/blog/sci-fi-fantasy/wp-content/uploads/sites/4/2018/01/tazheader.jpg",
+        interviewer: "Interviewer1", 
+        imageUrl: "https://img.discogs.com/RpVF3Q65EejSbUdZSlj4ut5kwsA=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-1157998-1282847385.jpeg.jpg",
         date: "01/15/17776",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
-        url: "https://www.sitepoint.com/get-url-parameters-with-javascript/",
+        url: "./sample_interview.html",
         tags: ["yyy", "zzz"],
     };
     const data4 = {
-        title: "Interview 4", 
-        artist: "Artist4", 
-        imageUrl: "https://www.barnesandnoble.com/blog/sci-fi-fantasy/wp-content/uploads/sites/4/2018/01/tazheader.jpg",
+        artist: "Artist4",
+        interviewer: "Interviewer3", 
+        imageUrl: "https://i.pinimg.com/originals/fb/fd/48/fbfd483568a4a052e7db95465b864923.jpg",
         date: "03/16/17776",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
-        url: "https://en.wikipedia.org/wiki/Vincenzo_Camuccini",
+        url: "./sample_interview.html",
         tags: ["zzz"],
     };
     previews = sortPreviews([data1, data2, data3, data4].map(p => makePreview(p)));
@@ -174,16 +174,16 @@ function sortPreviews(l) {
     let compare = (x, y) => new Date(y.date) - new Date(x.date);
     if (sortBy == 'artist') {
         compare = (x, y) => {
-            if (x.artist > y.artist) { 
+            if (x.artist < y.artist) { 
                 return -1;
             } else { 
                 return 1;
             }
         };
     }
-    if (sortBy == 'title') {
+    if (sortBy == 'interviewer') {
         compare = (x, y) => {
-            if (x.title > y.title) { 
+            if (x.interviewer < y.interviewer) { 
                 return -1;
             } else { 
                 return 1;
@@ -228,7 +228,7 @@ function formatPreview(p) {
     // preview image
     let image = document.createElement("img");
     image.setAttribute('src', p.imageUrl);
-    image.setAttribute('alt', 'preview image for article: ' + p.title);
+    image.setAttribute('alt', 'preview image for article');
     image.className = "previewImage";
     imageContainer.appendChild(image);
     preview.appendChild(imageContainer);
@@ -237,47 +237,36 @@ function formatPreview(p) {
     let previewContent = document.createElement('div');
     previewContent.className = "previewContent";
 
-    // title
+    // title "Artist with Interviewer"
     let previewTitle = document.createElement('div');
     previewTitle.className = "previewTitle";
-    previewTitle.innerHTML = p.title;
+    previewTitle.innerHTML = p.artist + " with " + p.interviewer;
+    previewContent.appendChild(previewTitle);
 
     // name of the artist and the date
-    let nameDate = document.createElement('div');
-    nameDate.className = 'previewNameDate';
-    let previewArtist = document.createElement('div');
-    previewArtist.className = "previewArtist"
-    previewArtist.innerHTML = p.artist;
     let date = document.createElement('div');
     date.className = "previewDate";
     date.innerHTML = moment(p.date).format('MMM Do, YYYY');
-    nameDate.appendChild(previewArtist);
-    nameDate.appendChild(date);
+    previewContent.appendChild(date);
     
     // description of the interview
     let previewDescription = document.createElement('div');
-    previewTitle.className = "previewDescription";
-    previewTitle.innerHTML = p.description;
+    previewDescription.className = "previewDescription";
+    previewDescription.innerHTML = p.description;
+    previewContent.appendChild(previewDescription);
 
     // button linking to the full interview
-    let previewButtonContainer = document.createElement('div');
-    previewTitle.className = "previewButtonContainer";
+    let previewLinkContainer = document.createElement('div');
+    previewLinkContainer.className = "previewLinkContainer";
     let previewLink = document.createElement('a');
     previewLink.className = "previewLink";
     previewLink.href = p.url;
-    let previewButton = document.createElement('button');
-    previewButton.className = "previewButton";
-    previewButton.innerHTML = "Read";
-    previewLink.appendChild(previewButton);
-    previewButtonContainer.appendChild(previewLink);
+    previewLink.innerHTML = "read »";
+    previewLinkContainer.appendChild(previewLink);
+    previewContent.appendChild(previewLinkContainer);
 
-    // append remaining child elements
-    previewContent.appendChild(previewTitle);
-    previewContent.appendChild(nameDate);
-    previewContent.appendChild(previewDescription);
-    previewContent.appendChild(previewButtonContainer);
+    // append previewContent to preview and return that preview
     preview.appendChild(previewContent);
-
     return preview;
 }
 

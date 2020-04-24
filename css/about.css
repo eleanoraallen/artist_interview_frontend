@@ -1,0 +1,20 @@
+#contentContainer {
+    display: flex;
+    flex-direction: row;
+    padding-top: 100px;
+    padding-left: 60px;
+    padding-right: 60px;
+    margin-bottom: 100px;
+  }
+
+  #aboutTextContainer {
+      padding-right: 50px;
+  }
+  .aboutTitle {
+      font-size: 16pt;
+  }
+
+  .aboutImageContainer {
+      margin-top: 50px;
+      text-align: center;
+  }

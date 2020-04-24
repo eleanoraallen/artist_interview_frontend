@@ -1,8 +1,86 @@
+#contentContainer {
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+  padding-left: 60px;
+  padding-right: 60px;
+  margin-bottom: 100px;
+}
+
+.sortContainer {
+  padding-top: 70px;
+  padding-bottom: 40px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.sortButton {
+  font-family: 'IngramMono-Regular', Helvetica, Arial, Sans-Serif;
+  background-color: rgb(238, 238, 238);
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 14pt;
+  outline: none;
+  border: none;
+}
+
+.sortButton:hover {
+  background-color: rgb(228, 228, 228);
+}
+
 .invisiblePreview {
   display: none;
 }
+
+.visiblePreview {
+  display: flex;
+  flex-direction: row;
+  padding-top: 80px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
   
 .previewImage {
-  width: 50px;
-  height: 50px;
+  width: 400px;
+  object-fit: scale-down;
+  padding-right: 30px;
+}
+
+.previewContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.previewTitle {
+  padding-top: 5px;
+  font-size: 14pt;
+}
+
+.previewDate {
+  padding-top: 1px;
+  font-size: 10pt;
+}
+
+.previewDescription {
+  padding-top: 10px;
+}
+
+.previewLinkContainer {
+  padding-bottom: 10px;
+  padding-right: 10px;
+  height: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.previewLink {
+  color: black;
+  text-decoration: none;
+  text-align: right;
+}
+
+.previewLink:hover {
+  text-decoration: underline;
 }
