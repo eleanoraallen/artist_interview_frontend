@@ -1,4 +1,3 @@
 TODO:
-- styling
 - backend
 - admin
