@@ -1,10 +1,19 @@
-#contentContainer {
+#searchContainer {
   display: flex;
-  flex-direction: column;
-  padding-top: 30px;
-  padding-left: 60px;
-  padding-right: 60px;
-  margin-bottom: 100px;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+#searchBar {
+  background-color: rgb(238, 238, 238);
+  width: 300px;
+  height: 40px;
+  border: hidden;
+  outline: none;
+  text-align: center;
+  font-family: 'IngramMono-Regular', Helvetica, Arial, Sans-Serif;
+  color: black;
+  font-size: 13pt;
 }
 
 .sortContainer {
@@ -28,6 +37,15 @@
 
 .sortButton:hover {
   background-color: rgb(228, 228, 228);
+}
+
+#contentContainer {
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+  padding-left: 60px;
+  padding-right: 60px;
+  margin-bottom: 100px;
 }
 
 .invisiblePreview {

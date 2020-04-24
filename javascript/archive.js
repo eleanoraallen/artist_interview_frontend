@@ -1,17 +1,11 @@
 // server url
 const url = "";
 
-// priview array
-let previews = [];
-
 // search string
 let searchString = "";
-if (window.location.href.split('search=').length > 1) {
-    searchString = window.location.href.split('search=')[1];
-}
 
-// set searchBar innerHTML
-document.getElementById("searchBar").innerHTML = searchString;
+// priview array
+let previews = [];
 
 // Sorted BY
 let sortBy = 'date';
@@ -157,7 +151,7 @@ function makePreview(p) {
  */
 function shouldShowPreview(p) {
     let show = searchString == "";
-    show = show || p.title.includes(searchString);
+    show = show || p.interviewer.includes(searchString);
     show = show || p.artist.includes(searchString);
     p.tags.forEach(t => show = show || t.includes(searchString));
     return show;

@@ -35,6 +35,10 @@ body {
     font-size: 16pt;
   }
 
+  .logoContainer {
+    width: 150px;
+  }
+
   .logoLink {
     color: black;
     text-decoration: none;
@@ -51,38 +55,6 @@ body {
     text-decoration: underline;
   }
 
-  .searchContainer {
-    display: flex;
-    flex-direction: row;
-  }
-
-  #searchBar {
-    background-color: rgb(255, 208, 0);
-    width: 50px;
-    border: hidden;
-    outline: none;
-    text-align: right;
-    font-family: 'IngramMono-Regular', Helvetica, Arial, Sans-Serif;
-  }
-
-  ::-webkit-input-placeholder {
-    color:transparent;
- }
- 
- :-moz-placeholder { /* Firefox 18- */
-    color:transparent; 
- }
- 
- ::-moz-placeholder {  /* Firefox 19+ */
-    color:transparent; 
- }
- 
- :-ms-input-placeholder {  
-    color:transparent;
- }
-
-  .searchIcon {
-    height: 20px;
-    margin-right: 10px;
-    margin-top: 2px;
+  .spaceDiv {
+    width: 150px;
   }
