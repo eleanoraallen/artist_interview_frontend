@@ -91,10 +91,14 @@ function writePreviews(l) {
         preview.appendChild(date);
         
         // description of the interview
+        let previewDescriptionContainer = document.createElement('div');
+        previewDescriptionContainer.className = "homePreviewDescriptionContainer";
         let previewDescription = document.createElement('div');
         previewDescription.className = "homePreviewDescription";
         previewDescription.innerHTML = p.description;
-        preview.appendChild(previewDescription);
+        previewDescriptionContainer.appendChild(previewDescription);
+        preview.appendChild(previewDescriptionContainer);
+
 
         // link to the full interview
         let previewLinkContainer = document.createElement('div');

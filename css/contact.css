@@ -1,12 +1,14 @@
 #contentContainer {
-    padding-top: 100px;
-    padding-left: 60px;
-    padding-right: 60px;
-    padding-bottom: 100px;
+    padding-top: 90px;
+    padding-bottom: 90px;
+    display: flex;
+    justify-content: center;
   }
 
   #contactTextContainer {
-      padding-right: 50px;
+      text-align: center;
+      line-height: 1.6;
+      width: 700px;
   }
   .contactTitle {
       font-size: 16pt;

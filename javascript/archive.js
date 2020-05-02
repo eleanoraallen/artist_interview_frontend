@@ -17,7 +17,6 @@ class Preview {
       this.interviewer = data.interviewer;
       this.date = data.date;
       this.imageUrl = data.imageUrl;
-      this.description = data.description;
       this.url = data.url;
       this.tags = data.tags;
       this.visible = visible;
@@ -86,7 +85,6 @@ function loadPreviews() {
         interviewer: "Interviewer2", 
         imageUrl: "https://pbs.twimg.com/profile_images/986909792227618817/FMmbKYXl_400x400.jpg",
         date: "03/15/17776",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
         url: "./sample_interview.html",
         tags: ["xxx", "yyy", "zzz"],
     };
@@ -95,7 +93,6 @@ function loadPreviews() {
         interviewer: "Interviewer4", 
         imageUrl: "https://www.barnesandnoble.com/blog/sci-fi-fantasy/wp-content/uploads/sites/4/2018/01/tazheader.jpg",
         date: "03/15/1776",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
         url: "./sample_interview.html",
         tags: ["xxx", "zzz"],
     };
@@ -104,7 +101,6 @@ function loadPreviews() {
         interviewer: "Interviewer1", 
         imageUrl: "https://img.discogs.com/RpVF3Q65EejSbUdZSlj4ut5kwsA=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-1157998-1282847385.jpeg.jpg",
         date: "01/15/17776",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
         url: "./sample_interview.html",
         tags: ["yyy", "zzz"],
     };
@@ -113,7 +109,6 @@ function loadPreviews() {
         interviewer: "Interviewer3", 
         imageUrl: "https://i.pinimg.com/originals/fb/fd/48/fbfd483568a4a052e7db95465b864923.jpg",
         date: "03/16/17776",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
         url: "./sample_interview.html",
         tags: ["zzz"],
     };
@@ -231,23 +226,23 @@ function formatPreview(p) {
     let previewContent = document.createElement('div');
     previewContent.className = "previewContent";
 
-    // title "Artist with Interviewer"
-    let previewTitle = document.createElement('div');
-    previewTitle.className = "previewTitle";
-    previewTitle.innerHTML = p.artist + " with " + p.interviewer;
-    previewContent.appendChild(previewTitle);
+    // the artist
+    let previewArtist = document.createElement('div');
+    previewArtist.className = "previewArtist";
+    previewArtist.innerHTML = p.artist;
+    previewContent.appendChild(previewArtist);
 
-    // name of the artist and the date
+    // the interviewer
+    let previewInterviewer = document.createElement('div');
+    previewInterviewer.className = "previewInterviewer";
+    previewInterviewer.innerHTML = p.interviewer;
+    previewContent.appendChild(previewInterviewer);
+
+    // the date
     let date = document.createElement('div');
     date.className = "previewDate";
     date.innerHTML = moment(p.date).format('MMM Do, YYYY');
     previewContent.appendChild(date);
-    
-    // description of the interview
-    let previewDescription = document.createElement('div');
-    previewDescription.className = "previewDescription";
-    previewDescription.innerHTML = p.description;
-    previewContent.appendChild(previewDescription);
 
     // button linking to the full interview
     let previewLinkContainer = document.createElement('div');
@@ -260,8 +255,15 @@ function formatPreview(p) {
     previewContent.appendChild(previewLinkContainer);
 
     // append previewContent to preview and return that preview
-    preview.appendChild(previewContent);
-    return preview;
+    let previewContentContainer = document.createElement('div');
+    previewContentContainer.className = "previewContentContainer";
+    previewContentContainer.appendChild(previewContent);
+    preview.appendChild(previewContentContainer);
+
+    let previewContainer = document.createElement('div');
+    previewContainer.className = "previewContainer";
+    previewContainer.appendChild(preview);
+    return previewContainer;
 }
 
 // loads previews when page is opened

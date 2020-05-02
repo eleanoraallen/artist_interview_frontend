@@ -1,8 +1,9 @@
+
 .homePreview {
   padding-left: 10px;
   padding-right: 10px;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 90px;
+  padding-bottom: 90px;
 }
 
 .homePreviewArtist {
@@ -19,18 +20,20 @@
 .homePreviewImageContainer {
   display: flex;
   justify-content: center;
-  padding-top: 30px;
+  padding-top: 90px;
 }
 
 .homePreviewImage {
-  width: 70%;
-  max-height: 550px;
-  object-fit: scale-down;
+  max-width: 700px !important;
+  max-height: 700px !important;
+  object-fit: scale-down !important;
+  width: 700px;
+  height: 700px;
 }
 
 .homeImageTitle {
   text-align: center;
-  padding-top: 5px;
+  padding-top: 15px;
   font-size: 10pt;
 }
 
@@ -38,17 +41,23 @@
   display: none;
 }
 
+.homePreviewDescriptionContainer {
+  display: flex;
+  justify-content: center;
+  padding-top: 90px;
+}
+
 .homePreviewDescription {
-  padding-top: 50px;
   color: rgb(255, 196, 0);
-  padding-right: 20%;
-  padding-left: 20%;
+  max-width: 700px;
+  font-size: 13.5pt;
+  line-height: 1.6;
 }
 
 .previewLinkContainer {
   display: flex;
   justify-content: center;
-  padding-top: 40px;
+  padding-top: 90px;
 }
 
 .homePreviewLink {

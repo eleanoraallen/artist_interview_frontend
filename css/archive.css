@@ -1,7 +1,7 @@
 #searchContainer {
+  padding-top: 90px;
   display: flex;
   justify-content: center;
-  margin-top: 60px;
 }
 
 #searchBar {
@@ -17,8 +17,8 @@
 }
 
 .sortContainer {
-  padding-top: 70px;
-  padding-bottom: 40px;
+  padding-top: 90px;
+  padding-bottom: 90px;
   display: flex;
   justify-content: space-evenly;
 }
@@ -42,55 +42,60 @@
 #contentContainer {
   display: flex;
   flex-direction: column;
-  padding-top: 30px;
-  padding-left: 60px;
-  padding-right: 60px;
-  margin-bottom: 100px;
+  margin-bottom: 90px;
 }
 
 .invisiblePreview {
   display: none;
 }
 
+.previewContainer {
+  display: flex;
+  justify-content: center;
+}
+
 .visiblePreview {
   display: flex;
   flex-direction: row;
-  padding-top: 80px;
-  padding-left: 30px;
-  padding-right: 30px;
+  width: 900px;
+  padding-bottom: 90px;
 }
   
 .previewImage {
-  width: 400px;
+  width: 250px;
   object-fit: scale-down;
-  padding-right: 30px;
+  padding-right: 50px;
+}
+
+.previewContentContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .previewContent {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 
-.previewTitle {
-  padding-top: 5px;
-  font-size: 14pt;
+.previewArtist {
+  padding-right: 50px;
+}
+
+.previewInterviewer {
+  padding-right: 50px;
 }
 
 .previewDate {
-  padding-top: 1px;
-  font-size: 10pt;
-}
-
-.previewDescription {
-  padding-top: 10px;
+  padding-right: 30px;
 }
 
 .previewLinkContainer {
-  padding-bottom: 10px;
+  /* padding-bottom: 10px;
   padding-right: 10px;
   height: 100%;
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column-reverse; */
 }
 
 .previewLink {
