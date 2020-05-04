@@ -14,8 +14,9 @@
 
   .descriptionContainer {
     width: 700px;
-    line-height: 1.6;
-    text-align: center;
+    text-align: left;
+    font-size: 14pt;
+    line-height: 1.3;
   }
 
   .aboutTitle {

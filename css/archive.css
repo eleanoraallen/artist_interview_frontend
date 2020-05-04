@@ -62,9 +62,9 @@
 }
   
 .previewImage {
-  width: 250px;
+  width: 150px;
   object-fit: scale-down;
-  padding-right: 50px;
+  padding-right: 75px;
 }
 
 .previewContentContainer {
@@ -79,15 +79,15 @@
 }
 
 .previewArtist {
-  padding-right: 50px;
+  padding-right: 75px;
 }
 
 .previewInterviewer {
-  padding-right: 50px;
+  padding-right: 75px;
 }
 
 .previewDate {
-  padding-right: 30px;
+  padding-right: 75px;
 }
 
 .previewLinkContainer {

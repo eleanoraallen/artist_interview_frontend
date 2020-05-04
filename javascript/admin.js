@@ -139,7 +139,7 @@ function publish() {
             const json = JSON.stringify(data);
 
 
-            
+
             // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
             // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
             // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -216,7 +216,7 @@ function getErrors() {
  * @return <String> the interview html
  */
 function getHTML() {
-    let h = `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>Interview</title><script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" crossorigin="anonymous"></script><link rel="stylesheet" href="../css/webfonts/ingram-mono-regular.css" type="text/css" charset="utf-8" /><link rel="stylesheet" type="text/css" href="../css/style.css" /><link rel="stylesheet" type="text/css" href="../css/interview.css" /></head><body><a id='skipLink' href='#contentContainer'>Jump to main</a><div class="header"><div class="logoContainer"><a href="index.html" class="logoLink">/ Variables</a></div><div class="navContainer" role="navigation"><nav><a class="navLink" href="./about.html">About</a><a class="navLink" href="./archive.html">Archive</a><a class="navLink" href="./contact.html">Contact</a></nav></div><div class="spaceDiv"></div></div><main><div id="contentContainer" role="main">`;
+    let h = `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>Interview</title><script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" crossorigin="anonymous"></script><link rel="stylesheet" href="../css/webfonts/ingram-mono-regular.css" type="text/css" charset="utf-8" /><link rel="stylesheet" type="text/css" href="../css/style.css" /><link rel="stylesheet" type="text/css" href="../css/interview.css" /></head><body><a id='skipLink' href='#contentContainer'>Jump to main</a><div class=pageContent><div class="header"><div class="logoContainer"><a href="index.html" class="logoLink">/ Variables</a></div><div class="navContainer" role="navigation"><nav><a class="navLink" href="./about.html">About</a><a class="navLink" href="./archive.html">Archive</a><a class="navLink" href="./contact.html">Contact</a></nav></div><div class="spaceDiv"></div></div><main><div id="contentContainer" role="main">`;
     h = h + `<div class="interviewArtist">${String(document.getElementById('artistInput').value)}</div>`;
     h = h + `<div class="interviewInterviewer">${String(document.getElementById('interviewerInput').value)}</div>`;
     h = h + `<div class="interviewImageContainer"><img class="interviewImage" src="${String(document.getElementById('previewImageSource').value)}"  alt="${String(document.getElementById('previewImageAlt').value)}"></div>`;
@@ -252,7 +252,10 @@ function getHTML() {
             }
         }
     });
-    h = h + `</div></main><div class="footer"></div></body></html>`;
+    h = h + `</div></main><div class="footer"><div class="footerLogoContainer"><a href="index.html" class="logoLink">/</a></div></div></div></body></html>`;
+
+    
+    
     return h;
 }
 
