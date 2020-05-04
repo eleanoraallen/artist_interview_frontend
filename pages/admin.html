@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Admin</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="../css/webfonts/ingram-mono-regular.css" type="text/css" charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="../css/style.css" />
+		<link rel="stylesheet" type="text/css" href="../css/admin.css" />
+	</head>
+	<body>
+		<a id='skipLink' href='#contentContainer'>Jump to main</a>
+		<div class="header">
+			<div class="logoContainer"><a href="index.html" class="logoLink">/ Variables</a></div>
+			<div class="navContainer" role="navigation">
+				<nav>
+					<a class="navLink" href="./about.html">About</a>
+					<a class="navLink" href="./archive.html">Archive</a>
+					<a class="navLink currentNavLink" href="./contact.html">Contact</a>
+				</nav>
+			</div>
+			<div class="spaceDiv"></div>
+		</div>
+		<main>
+			<div id="contentContainer" role="main">
+				<div id="adminTitle" class="elementContainer">Create an Interview</div>
+				<div class="adminSeperator"></div>
+				<div id="basicInfoContainer">
+					<div id="artistContainer" class="elementContainer">
+						<input class="inputBar" id="artistInput" type="text" placeholder="add artist">
+					</div> 
+					<div id="interviewerContainer" class="elementContainer">
+						<input class="inputBar" id="interviewerInput" type="text" placeholder="add interviewer">
+					</div>
+					<div id="previewImageSourceContainer" class="elementContainer">
+						<input class="inputBar" id="previewImageSource" type="text" placeholder="add primary image url">
+					</div>
+					<div id="previewImageCaptionContainer" class="elementContainer">
+						<input class="inputBar" id="previewImageCaption" type="text" placeholder="add primary image caption">
+					</div>
+					<div id="previewImageAltContainer" class="elementContainer">
+						<input class="inputBar" id="previewImageAlt" type="text" placeholder="add primary image alternant text">
+					</div>
+					<div id="descriptionContainer" class="elementContainer">
+						<textarea class="inputField" id="descriptionInput" type="text" placeholder="add interview description"></textarea>
+					</div>
+				</div>
+				<div class="adminSeperator"></div>
+                <div id="interviewContainer" class="elementContainer"> 
+				</div>
+				<div id="interviewButtonContainer" class="elementContainer">
+					<button class="adminButton interviewButton" id="addArtestButton" onclick="addArtist()">Add Artist Statement</button>
+					<button class="adminButton interviewButton" id="addInterviewerButton" onclick="addInterviewer()">Add Interviewer Statement</button>
+					<button class="adminButton interviewButton" id="addImageButton" onclick="addImage()">Add Image</button>
+
+				</div>
+				<div class="adminSeperator"></div>
+				<div id="tagContainer" class="elementContainer">
+				</div>
+				<div id="tagButtonContainer" class="elementContainer">
+					<button class="adminButton" id="addTagButton" onclick="addTag()">Add Tag</button>
+				</div>
+				<div class="adminSeperator"></div>
+				<div id="endButtonContainer" class="elementContainer">
+					<button class="adminButton" id="previewButton" onclick="showPreview()">Preview</button>
+                    <button class="adminButton" id="publishButton" onclick="publish()">Publish</button>
+				</div>
+			</div>
+		</main>
+		<div class="footer">	
+        </div>
+        <script type="text/javascript" src="../javascript/admin.js"></script>
+	</body>
+</html>
