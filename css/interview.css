@@ -24,9 +24,9 @@
   
   .interviewImage {
     padding-top: 20px;
-    width: 70%;
-    max-height: 550px;
-    object-fit: scale-down;
+    max-width: 700px !important;
+    max-height: 700px !important;
+    object-fit: scale-down !important;
   }
   
   .interviewImageTitle {
