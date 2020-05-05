@@ -10,6 +10,8 @@
       padding-top: 90px;
       display: flex;
       justify-content: center;
+      padding-bottom: 0px;
+      margin-bottom: 0px;
   }
 
   .descriptionContainer {
@@ -26,4 +28,19 @@
   .aboutImageContainer {
       margin-top: 50px;
       text-align: center;
+  }
+
+  #credits {
+      padding-top: 90px;
+      text-align: center;
+      font-size: 10pt;
+  }
+
+  .creditLink {
+      color: black;
+      text-decoration: none;
+  }
+
+  .creditLink:hover {
+      text-decoration: underline;
   }

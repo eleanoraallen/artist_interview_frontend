@@ -30,7 +30,7 @@ body {
     background-color: rgb(255, 208, 0);
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: left;
     padding-top: 1.5vh;
     padding-bottom: 1.5vh;
     padding-left: 20px;
@@ -39,7 +39,7 @@ body {
   }
 
   .logoContainer {
-    width: 150px;
+    padding-right: 20px;
   }
 
   .logoLink {

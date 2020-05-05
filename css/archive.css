@@ -23,6 +23,12 @@
   justify-content: space-evenly;
 }
 
+.sortButtonContainer {
+  width: 200px;
+  display: flex;
+  justify-content: center;
+}
+
 .sortButton {
   font-family: 'IngramMono-Regular', Helvetica, Arial, Sans-Serif;
   background-color: rgb(238, 238, 238);

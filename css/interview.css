@@ -31,7 +31,7 @@
   
   .interviewImageTitle {
     text-align: center;
-    padding-top: 5px;
+    padding-top: 10px;
     font-size: 10pt;
     padding-bottom: 20px;
   }
@@ -47,7 +47,7 @@
   }
 
   .interviewQuestion {
-    font-size: 14pt;
+    font-size: 15pt;
     line-height: 1.3;
     padding-top: 30px;
     color: black;
@@ -58,7 +58,7 @@
   }
 
   .interviewAnswer {
-    font-size: 14pt;
+    font-size: 15pt;
     line-height: 1.4;
     padding-top: 30px;
     color: black;
