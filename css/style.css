@@ -7,6 +7,10 @@ body {
     margin: 0;
     background-color: white;
   }
+
+  .pageContent {
+    min-height: 100vh;
+  }
   
   #skipLink {
     position:absolute;
@@ -21,9 +25,6 @@ body {
     position:static;
     width:auto;
     height:auto;
-  }
-
-  .pageContent {
   }
 
   .header {
@@ -62,10 +63,6 @@ body {
     min-height: 82vh;
   }
 
-  .spaceDiv {
-    width: 150px;
-  }
-
   .footerContainer {
     height: max-content;
     display: flex;
@@ -86,3 +83,29 @@ body {
     display: flex;
     flex-direction: row-reverse;
   }
+
+/* Tablet/Mobile Style */
+ @media screen and (max-width: 768px) {
+
+  .header {
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    font-size: 12pt;
+    padding-left: 10px;
+  }
+  .navLink {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .footer {
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    font-size: 12pt;
+  }
+
+  .footerLogoContainer {
+    margin-right: 10px;
+  }
+
+ }

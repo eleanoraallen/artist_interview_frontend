@@ -215,11 +215,14 @@ function formatPreview(p) {
     imageContainer.className = "previewImageContainer";
 
     // preview image
+    let l = document.createElement("a");
+    l.href = p.url;
     let image = document.createElement("img");
     image.setAttribute('src', p.imageUrl);
     image.setAttribute('alt', 'preview image for article');
     image.className = "previewImage";
-    imageContainer.appendChild(image);
+    l.appendChild(image);
+    imageContainer.appendChild(l);
     preview.appendChild(imageContainer);
 
     // container for the preview's textual content

@@ -6,6 +6,9 @@
     margin-bottom: 90px;
   }
 
+  #aboutImage {
+  }
+
   #aboutTextContainer {
       padding-top: 90px;
       display: flex;
@@ -44,3 +47,41 @@
   .creditLink:hover {
       text-decoration: underline;
   }
+
+/* Tablet/Mobile Style */
+@media screen and (max-width: 768px) {
+    #contentContainer {
+        padding-top: 20px;
+        padding-bottom: 0px;
+    }
+
+    #aboutImage {
+        max-width: 50%;
+    }
+
+    #aboutImageTitle {
+        font-size: 11pt;
+        padding-top: 2px;
+    }
+    
+    .aboutTitle {
+        font-size: 13pt;
+    }
+
+    #aboutTextContainer {
+        padding-top: 50px;
+    }
+
+    .descriptionContainer {
+        width: 90%;
+        font-size: 11pt;
+      }
+    
+    #credits {
+        padding-top: 40px;
+        text-align: center;
+        font-size: 10pt;
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+}

@@ -64,13 +64,14 @@
   display: flex;
   flex-direction: row;
   width: 900px;
+  max-width: 95%;
   padding-bottom: 90px;
 }
-  
+
 .previewImage {
   width: 150px;
   object-fit: scale-down;
-  padding-right: 75px;
+  padding-right: 5vw;
 }
 
 .previewContentContainer {
@@ -85,23 +86,15 @@
 }
 
 .previewArtist {
-  padding-right: 75px;
+  padding-right: 5vw;
 }
 
 .previewInterviewer {
-  padding-right: 75px;
+  padding-right: 5vw;
 }
 
 .previewDate {
-  padding-right: 75px;
-}
-
-.previewLinkContainer {
-  /* padding-bottom: 10px;
-  padding-right: 10px;
-  height: 100%;
-  display: flex;
-  flex-direction: column-reverse; */
+  padding-right: 5vw;
 }
 
 .previewLink {
@@ -113,3 +106,71 @@
 .previewLink:hover {
   text-decoration: underline;
 }
+
+  /* Tablet/Mobile Style */
+  @media screen and (max-width: 768px) {
+
+    #contentContainer {
+      margin-bottom: 40px;
+    }
+
+    #searchContainer {
+      padding-top: 60px;
+    }
+    
+    #searchBar {
+      background-color: rgb(238, 238, 238);
+      max-width: 90%;
+      height: auto;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      font-size: 11pt;
+    }
+    
+    .sortContainer {
+      padding-top: 40px;
+      padding-bottom: 90px;
+      justify-content: space-evenly;
+    }
+    
+    .sortButtonContainer {
+      width: 120px;
+    }
+    
+    .sortButton {
+      padding-top: 5px;
+      padding-bottom: 8px;
+      padding-left: 8px;
+      padding-right: 5px;
+      font-size: 10pt;
+      width: 120px;
+    }
+
+    .visiblePreview {
+      justify-content: space-evenly;
+      padding-bottom: 90px;
+    }
+
+    .previewContent {
+      flex-direction: column;
+      min-width: 150px;
+      
+    }
+
+    .previewArtist {
+      padding-right: 0px;
+      padding-bottom: 5px;
+      font-size: 13pt;
+    }
+    
+    .previewInterviewer {
+      padding-right: 0px;
+      padding-bottom: 5px;
+    }
+    
+    .previewDate {
+      padding-right: 0px;
+      padding-bottom: 10px;
+    }
+    
+  }

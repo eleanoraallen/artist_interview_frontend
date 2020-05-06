@@ -72,3 +72,56 @@
   height: 10px;
   background-color: rgb(255, 208, 0);
 }
+
+ /* Tablet/Mobile Style */
+ @media screen and (max-width: 768px) {
+  .homePreview {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  
+  .homePreviewArtist {
+    font-size: 14pt;
+    text-align: center;
+  }
+  
+  .homePreviewInterviewer {
+    padding-top: 7px;
+    font-size: 12pt;
+  }
+  
+  .homePreviewImageContainer {
+    padding-top: 40px;
+  }
+  
+  .homePreviewImage {
+    width: 90%;
+  }
+  
+  .homeImageTitle {
+    text-align: center;
+    padding-top: 10px;
+    font-size: 10pt;
+  }
+  
+  .homePreviewDescriptionContainer {
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+  }
+  
+  .homePreviewDescription {
+    width: 90%;
+    font-size: 11pt;
+  }
+  
+  .previewLinkContainer {
+    padding-top: 40px;
+  }
+  
+  .homePreviewLink {
+    color: black;
+    text-decoration: none;
+    font-size: 11pt;
+  }
+}

@@ -19,7 +19,7 @@
   }
 
   #subscribeForm {
-    padding-top: 70px;
+    padding-top: 50px;
     justify-content: center;
   }
 
@@ -44,7 +44,7 @@
     padding-bottom: 5px;
     padding-left: 15px;
     padding-right: 15px;
-    font-size: 14pt;
+    font-size: 11pt;
     outline: none;
     border: none;
   }
@@ -52,3 +52,34 @@
   #submit:hover {
     background-color: rgb(228, 228, 228);
   }
+
+  /* Tablet/Mobile Style */
+@media screen and (max-width: 768px) {
+
+  #contentContainer {
+      padding-top: 60px;
+  }
+
+  #contactTextContainer {
+    font-size: 11pt;
+    width: 90%;
+  }
+  .contactTitle {
+      font-size: 13pt;
+  }
+
+  #subscribeForm {
+    padding-top: 40px;
+  }
+
+  #tlemail {
+    background-color: rgb(238, 238, 238);
+    max-width: 80%;
+    padding-left: 7px;
+    font-size: 11pt;
+  }
+
+  #submit {
+    font-size: 11pt;
+  }
+}
